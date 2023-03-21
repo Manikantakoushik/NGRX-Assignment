@@ -1,0 +1,19 @@
+<p>posts-list works!</p>
+<button class="my-button" [routerLink]="['add']">Add post</button>
+<table>
+    <tr>
+        <th>Id</th>&nbsp;
+        <th>Title</th>&nbsp;
+        <th>Price</th>&nbsp;
+        <th>Action</th>&nbsp;
+    </tr>
+    <tr *ngFor="let post of (Post | async)">
+          <td>  {{post.id}}</td>&nbsp;
+          <td>  {{post.title}}</td>&nbsp;
+          <td>  {{post.price}}</td>
+          <td><button class="my-button">Edit</button></td>
+          <td><button class="my-button">Details</button></td>
+    </tr>
+</table>
+
+<router-outlet></router-outlet>
