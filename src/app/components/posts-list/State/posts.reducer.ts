@@ -9,7 +9,7 @@ const _postsReducer = createReducer(intialState,on(addPost,(state,action)=>{
     return {...state,posts:[...state.posts,post],}
 }),on(updatePost,(state,action)=>{
     let updated_post=state.posts.map((post)=>{
-       return post.id === Number(action.post.id) ? action.post:post;
+       return String(post.id) === String(action.post.id) ? action.post:post;
     })
     return {...state,posts:updated_post}
 }));
