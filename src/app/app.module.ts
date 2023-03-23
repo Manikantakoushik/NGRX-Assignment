@@ -10,12 +10,16 @@ import { AppComponent } from './app.component';
 import { PostsListComponent } from './components/posts-list/posts-list.component';
 import { appReducer } from './Store/app.state';
 import { AddPostComponent } from './components/add-post/add-post.component';
+import { EditPostComponent } from './components/edit-post/edit-post.component';
+import { DetailPostComponent } from './components/detail-post/detail-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsListComponent,
-    AddPostComponent
+    AddPostComponent,
+    EditPostComponent,
+    DetailPostComponent
   ],
   imports: [
     BrowserModule,

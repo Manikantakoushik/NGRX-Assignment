@@ -11,8 +11,8 @@
           <td>  {{post.id}}</td>&nbsp;
           <td>  {{post.title}}</td>&nbsp;
           <td>  {{post.price}}</td>
-          <td><button class="my-button">Edit</button></td>
-          <td><button class="my-button">Details</button></td>
+          <td><button class="my-button" [routerLink]="['edit',post.id]">Update</button></td>
+          <td><button class="my-button"[routerLink]="['product-list',post.id]">Details</button></td>
     </tr>
 </table>
 
