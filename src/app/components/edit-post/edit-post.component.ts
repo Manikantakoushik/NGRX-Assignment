@@ -64,6 +64,10 @@ export class EditPostComponent implements OnInit {
       id:this.id,
       title,price
     }
+    // console.log("post",post);
+    
+    // console.log("updateed post :",updatePost({ post}));
+    
     this.store.dispatch(updatePost({ post}));
     this.router.navigate(['/'])
      

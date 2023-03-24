@@ -28,7 +28,7 @@
           </div>
           <div class="mb-3">
             <label>Price</label>
-            <input type="number" class="form-control" formControlName="price" />
+            <input type="number" class="form-control" formControlName="price" style="margin-top: 10px;"/>
             <div>{{ showDescriptionErrors() }}</div>
           </div>
         </div>
@@ -38,6 +38,7 @@
             type="submit"
             class="btn btn-primary"
             [disabled]="!postForm.valid"
+            style="margin-top: 10px;"
           >
             Update Post
           </button>

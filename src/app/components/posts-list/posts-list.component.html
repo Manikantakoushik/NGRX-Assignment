@@ -1,5 +1,5 @@
 <h2>Products Page</h2>
-<button class="my-button" [routerLink]="['add']">Add Product</button>
+<button class="my-button" [routerLink]="['add']" style="margin-bottom: 10px;">Add Product</button>
 <table>
     <tr>
         <th>Id</th>&nbsp;
@@ -12,7 +12,7 @@
           <td>  {{post.title}}</td>&nbsp;
           <td>  {{post.price}}</td>
           <td><button class="my-button" [routerLink]="['edit',post.id]">Update</button></td>
-          <td><button class="my-button"[routerLink]="['product-list',post.id]">Details</button></td>
+          <td><button class="my-button" [routerLink]="['product-list',post.id]">Details</button></td>
     </tr>
 </table>
 

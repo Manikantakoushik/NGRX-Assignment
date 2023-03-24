@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Posts } from 'src/app/Models/Posts-list.model';
 import { AppState } from 'src/app/Store/app.state';
@@ -12,7 +13,7 @@ import { addPost } from '../posts-list/State/posts.action';
 })
 export class AddPostComponent implements OnInit {
   postForm!: FormGroup;
-  constructor(private store:Store<AppState>) { }
+  constructor(private store:Store<AppState>,private route:Router) { }
 
   ngOnInit(): void {
     this.postForm = new FormGroup({
@@ -37,16 +38,14 @@ export class AddPostComponent implements OnInit {
   }
 
   onAddPost(){
-    console.log("afxtcdyvy",this.postForm);
     const post:Posts={
       // id:this.postForm.value.id,
       title:this.postForm.value.title,
       price:this.postForm.value.price
     }
-
+    
     this.store.dispatch(addPost({post}))
-
-
+    this.route.navigate(['/'])
   }
 
 }
